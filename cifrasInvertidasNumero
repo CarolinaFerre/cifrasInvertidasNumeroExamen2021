@@ -1,0 +1,42 @@
+package examenprimeraeva2021;
+import java.util.Scanner;
+public class examen {
+
+static Scanner sc=new Scanner(System.in);
+	//variables estáticas de ejercicio 2
+	static int contador=0;
+	static int cociente;
+	static int resto;
+	static int contadoresto;
+	static int invertido;
+  
+  public static void numerosAlaInversa(int numero4) {
+		if(numero4<=0) {
+			System.out.println("No se puede realizar la operación");
+			System.exit(0);
+		}else {
+			while(numero4>0) {
+				resto=numero4%10;
+				invertido=invertido*10+resto;
+				numero4=Math.abs(numero4/10);
+				
+				contador++;
+				
+			}
+		System.out.println("El número tiene "+contador+" cifras");
+		System.out.println(invertido);
+	
+			
+		}
+		
+	}
+  
+  public static void main(String[] args) {
+  
+  	System.out.println("***********EJERCICIO 2************");
+		System.out.println("Introduce un número");
+		int numero4=sc.nextInt();
+		examen.numerosAlaInversa(numero4);
+	}
+
+}
